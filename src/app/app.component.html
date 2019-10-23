@@ -1,0 +1,26 @@
+<router-outlet></router-outlet>
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+    <h1>
+      Welcome to {{ title }}!
+    </h1>
+  </div>
+  <article style="text-align:center">
+    <p>
+      SCORM API version: {{apiVersion}}
+    </p>
+    <p>
+      Press the buttons to change your score. The score will be send to the LMS, if it is connected and SCORM_API is
+      found.
+    </p>
+  
+    <button (click)="changeScore(score-1)">-</button>
+    {{score}}
+    <button (click)="changeScore(score+1)">+</button>
+    <hr>
+    <div style="text-align:center">
+      <button (click)="submitScore()">Save</button>
+    </div>
+  </article>
+  
+  
